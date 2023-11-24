@@ -29,7 +29,7 @@ routes.post('/login',async(req,res)=>{
                     res.cookie('token',token,{
                         httpOnly:true,
                         secure:true,
-                        domain:'127.0.0.1:3000'
+                        domain:".app.localhost"
                     }).json({
                         msg:"login successfull",
                         username:loggedUser.username,
