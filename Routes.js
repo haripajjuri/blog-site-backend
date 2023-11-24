@@ -28,7 +28,7 @@ routes.post('/login',async(req,res)=>{
                     if(err) throw err;
                     res.cookie('token',token,{
                         domain:'http://localhost:3000',
-                        sameSite:'none',
+                        httpOnly:true,
                         secure:true
                     }).json({
                         msg:"login successfull",
