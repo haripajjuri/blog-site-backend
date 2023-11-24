@@ -27,7 +27,7 @@ routes.post('/login',async(req,res)=>{
                 jwt.sign({username:loggedUser.username, id:loggedUser.id},"hari1234",{},(err,token)=>{
                     if(err) throw err;
                     res.cookie('token',token,{
-                        domain:'http://localhost:3000',
+                        domain:'localhost:3000',
                         httpOnly:true,
                         secure:true
                     }).json({
